@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&family=Gaegu:wght@700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="style.css">
   <script src="i18n.js" defer></script>
+  <script src="gallery.js" defer></script>
 </head>
 <body>
 
@@ -96,6 +97,30 @@
           <li lang="en">Line 6 POD 2.0</li>
           <li data-i18n="gear.mac">맥북</li>
         </ul>
+      </div>
+      <div class="photos">
+        <h3 data-i18n="photos.title">그 시절의 장면들</h3>
+        <p data-i18n="photos.desc">그때의 사진을 AI로 다시 그렸습니다. 누르면 크게 볼 수 있어요.</p>
+        <ul class="photo-grid">
+          <li><button type="button" class="photo-thumb"><img src="assets/story/01.jpg" width="371" height="509" alt="거실 소파 앞에서 일렉트릭 기타를 치는 모습" data-i18n-alt="photos.1" loading="lazy"></button></li>
+          <li><button type="button" class="photo-thumb"><img src="assets/story/02.jpg" width="371" height="509" alt="같은 장면을 수채화로 그린 그림" data-i18n-alt="photos.2" loading="lazy"></button></li>
+          <li><button type="button" class="photo-thumb"><img src="assets/story/03.jpg" width="414" height="302" alt="물가에서 마이크를 잡고 노래하는 모습" data-i18n-alt="photos.3" loading="lazy"></button></li>
+          <li><button type="button" class="photo-thumb"><img src="assets/story/04.jpg" width="402" height="293" alt="연습실에서 기타를 들고 선 모습" data-i18n-alt="photos.4" loading="lazy"></button></li>
+          <li><button type="button" class="photo-thumb"><img src="assets/story/05.jpg" width="378" height="276" alt="무대에서 기타를 치며 노래하는 뒷모습" data-i18n-alt="photos.5" loading="lazy"></button></li>
+          <li><button type="button" class="photo-thumb"><img src="assets/story/06.jpg" width="378" height="276" alt="용지공원 밴드 페스티벌 무대에서 노래하는 모습" data-i18n-alt="photos.6" loading="lazy"></button></li>
+          <li><button type="button" class="photo-thumb"><img src="assets/story/07.jpg" width="378" height="276" alt="같은 무대에서 밴드가 함께 공연하는 모습" data-i18n-alt="photos.7" loading="lazy"></button></li>
+          <li><button type="button" class="photo-thumb"><img src="assets/story/08.jpg" width="414" height="302" alt="방바닥에 앉아 기타를 연습하는 모습" data-i18n-alt="photos.8" loading="lazy"></button></li>
+        </ul>
+        <dialog class="lightbox" id="lightbox">
+          <figure>
+            <img id="lightbox-img" src="" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+          </figure>
+          <p class="lightbox-count" id="lightbox-count"></p>
+          <button type="button" class="lb-btn lb-close" aria-label="닫기" data-i18n-aria="photos.close"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg></button>
+          <button type="button" class="lb-btn lb-prev" aria-label="이전 사진" data-i18n-aria="photos.prev"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+          <button type="button" class="lb-btn lb-next" aria-label="다음 사진" data-i18n-aria="photos.next"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </dialog>
       </div>
     </div>
   </section>
