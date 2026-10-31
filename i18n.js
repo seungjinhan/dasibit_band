@@ -75,6 +75,7 @@ const STRINGS = {
     'music.more': 'YouTube 채널 전체 보기 →',
     'connect.title': '새 노래가 나오면<br>가장 먼저',
     'connect.p': '뮤직비디오는 YouTube에서, 작업하는 일상은 X와 Instagram에서 전합니다.',
+    'footer.visitors': '방문자',
   },
   en: {
     'meta.title': 'Dasibit · 다시빛',
@@ -139,6 +140,7 @@ const STRINGS = {
     'music.more': 'See the full YouTube channel →',
     'connect.title': 'Be the first<br>to hear new songs',
     'connect.p': 'Music videos on YouTube; everyday studio life on X and Instagram.',
+    'footer.visitors': 'Visitors',
   },
   ja: {
     'meta.title': 'Dasibit · 다시빛',
@@ -203,6 +205,7 @@ const STRINGS = {
     'music.more': 'YouTubeチャンネルをすべて見る →',
     'connect.title': '新しい歌を<br>いちばん早く',
     'connect.p': 'ミュージックビデオはYouTubeで、制作の日常はXとInstagramでお届けします。',
+    'footer.visitors': '訪問者',
   },
   'zh-Hans': {
     'meta.title': 'Dasibit · 다시빛',
@@ -267,6 +270,7 @@ const STRINGS = {
     'music.more': '查看 YouTube 频道全部内容 →',
     'connect.title': '新歌发布<br>第一时间知道',
     'connect.p': '音乐视频在 YouTube，创作日常在 X 和 Instagram。',
+    'footer.visitors': '访客',
   },
   'zh-Hant': {
     'meta.title': 'Dasibit · 다시빛',
@@ -331,6 +335,7 @@ const STRINGS = {
     'music.more': '查看 YouTube 頻道全部內容 →',
     'connect.title': '新歌發表<br>第一時間知道',
     'connect.p': '音樂影片在 YouTube，創作日常在 X 和 Instagram。',
+    'footer.visitors': '訪客',
   },
   es: {
     'meta.title': 'Dasibit · 다시빛',
@@ -395,6 +400,7 @@ const STRINGS = {
     'music.more': 'Ver todo el canal de YouTube →',
     'connect.title': 'Sé el primero<br>en escuchar lo nuevo',
     'connect.p': 'Los videoclips, en YouTube; el día a día del proceso, en X e Instagram.',
+    'footer.visitors': 'Visitantes',
   },
   vi: {
     'meta.title': 'Dasibit · 다시빛',
@@ -459,6 +465,7 @@ const STRINGS = {
     'music.more': 'Xem toàn bộ kênh YouTube →',
     'connect.title': 'Nghe bài mới<br>sớm nhất',
     'connect.p': 'Video âm nhạc trên YouTube, đời thường khi sáng tác trên X và Instagram.',
+    'footer.visitors': 'Khách truy cập',
   },
   th: {
     'meta.title': 'Dasibit · 다시빛',
@@ -523,6 +530,7 @@ const STRINGS = {
     'music.more': 'ดูช่อง YouTube ทั้งหมด →',
     'connect.title': 'ฟังเพลงใหม่<br>ก่อนใคร',
     'connect.p': 'มิวสิกวิดีโอบน YouTube ชีวิตประจำวันระหว่างทำเพลงบน X และ Instagram',
+    'footer.visitors': 'ผู้เยี่ยมชม',
   },
 };
 
