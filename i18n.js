@@ -527,7 +527,35 @@ const STRINGS = {
 };
 
 const DEFAULT_LANG = 'ko';
+const FALLBACK_LANG = 'en';
 const STORAGE_KEY = 'dasibit-lang';
+
+// Used only when no browser language is one we translate: guess from the device time zone.
+const TZ_LANG = {
+  'Asia/Seoul': 'ko',
+  'Asia/Tokyo': 'ja',
+  'Asia/Shanghai': 'zh-Hans', 'Asia/Chongqing': 'zh-Hans', 'Asia/Harbin': 'zh-Hans', 'Asia/Urumqi': 'zh-Hans',
+  'Asia/Taipei': 'zh-Hant', 'Asia/Hong_Kong': 'zh-Hant', 'Asia/Macau': 'zh-Hant',
+  'Asia/Bangkok': 'th',
+  'Asia/Ho_Chi_Minh': 'vi', 'Asia/Saigon': 'vi',
+  'Europe/Madrid': 'es', 'Atlantic/Canary': 'es', 'Africa/Ceuta': 'es',
+  'America/Mexico_City': 'es', 'America/Monterrey': 'es', 'America/Merida': 'es', 'America/Cancun': 'es',
+  'America/Chihuahua': 'es', 'America/Mazatlan': 'es', 'America/Tijuana': 'es', 'America/Hermosillo': 'es',
+  'America/Bogota': 'es', 'America/Lima': 'es', 'America/Santiago': 'es', 'America/Caracas': 'es',
+  'America/Buenos_Aires': 'es', 'America/Montevideo': 'es', 'America/Asuncion': 'es', 'America/La_Paz': 'es',
+  'America/Guayaquil': 'es', 'America/Panama': 'es', 'America/Costa_Rica': 'es', 'America/Guatemala': 'es',
+  'America/El_Salvador': 'es', 'America/Tegucigalpa': 'es', 'America/Managua': 'es', 'America/Havana': 'es',
+  'America/Santo_Domingo': 'es', 'America/Puerto_Rico': 'es',
+};
+
+function langFromTimeZone() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    if (TZ_LANG[tz]) return TZ_LANG[tz];
+    if (tz.startsWith('America/Argentina/')) return 'es';
+  } catch (e) { /* Intl unavailable */ }
+  return null;
+}
 
 function matchLang(tag) {
   if (!tag) return null;
@@ -550,7 +578,7 @@ function pickLang() {
     const m = matchLang(tag);
     if (m) return m;
   }
-  return DEFAULT_LANG;
+  return langFromTimeZone() || FALLBACK_LANG;
 }
 
 function loadFonts(lang) {
