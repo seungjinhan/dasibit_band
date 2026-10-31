@@ -10,7 +10,7 @@
   function show(i) {
     current = (i + thumbs.length) % thumbs.length;
     const img = thumbs[current].querySelector('img');
-    boxImg.src = img.src;
+    boxImg.src = img.dataset.full;
     boxImg.alt = img.alt;
     boxCaption.textContent = img.alt;
     boxCount.textContent = `${current + 1} / ${thumbs.length}`;
