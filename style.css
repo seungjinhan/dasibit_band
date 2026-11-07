@@ -407,3 +407,11 @@ html:has(.lightbox[open]) { overflow: hidden; }
   .lightbox figure { padding: 64px 12px 80px; }
   .lb-prev, .lb-next { top: auto; bottom: 16px; transform: none; }
 }
+
+/* Revived Songs: scheduled videos before their release time (releases.js) */
+.demo-thumb.has-img { position: relative; }
+.demo-soon, .demo-when { display: none; }
+.demo.is-upcoming .demo-thumb img { filter: grayscale(1); }
+.demo.is-upcoming .demo-soon { position: absolute; top: 10px; left: 10px; display: block; padding: 4px 10px; background: var(--accent); border: 2px solid var(--ink); font-size: 13px; font-weight: 700; }
+.demo.is-upcoming .demo-when { display: block; margin: -4px 0 0; font-size: 15px; font-weight: 700; }
+.demo.is-upcoming .demo-link:hover h3 { text-decoration: none; }

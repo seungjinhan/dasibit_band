@@ -621,6 +621,7 @@ function applyLang(lang) {
   const select = document.getElementById('lang-select');
   select.value = lang;
   select.setAttribute('aria-label', s['lang.label']);
+  document.dispatchEvent(new Event('langchange'));
 }
 
 function setLang(lang) {
